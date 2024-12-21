@@ -1,17 +1,12 @@
-
-
-
 interface BaseResponse {
-  error: boolean;
-  msg: string;
-  status: number;
+  error: boolean
+  msg: string
+  status: number
 }
-
-
 
 interface ResCheckEmailUsed extends BaseResponse {
   data: {
-    validEmail: boolean;
+    validEmail: boolean
   }
 }
 
@@ -22,17 +17,17 @@ interface ResLogin extends BaseResponse {
     validPassword: string
     token: string
     photo?: string
-  },
+  }
 }
 
 interface ResponseUploadImage {
-  msg: string,
+  msg: string
   nameImage: string
   url: string
 }
 
 interface ResponseCheckToken {
-  error: string,
+  error: string
   acces: boolean
 }
 
@@ -44,7 +39,6 @@ interface UserData {
   password: string
   imageProfile: string
 }
-
 
 type ResGetAllBreweries = Brewery[]
 
