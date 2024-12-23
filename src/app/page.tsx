@@ -1,18 +1,21 @@
 'use client'
 
 import Task from '@/components/common/task/task'
-// import { Button } from '@/components/ui/button/button'
 import { Loader } from '@/components/ui/loader/loader'
 import { SearchInput } from '@/components/ui/search/search'
 import useGetTasks from '@/services/hooks/tasks'
+import { useState } from 'react'
 
 export default function Home() {
+  const [valueForSearch, setValueForSearch] = useState<string>('')
   //* Traemos todas las tareas */
-  const { data: tasksList, isLoading, isError } = useGetTasks({})
-  //* Mostramos el loader en caso de que este cargando alguna request */
-  if (isLoading) return <Loader />
-  //* Mostramos el error en caso de que se de */
-  if (isError || !tasksList) return <p>Ocurrio un error</p>
+  const {
+    data: tasksList,
+    isLoading,
+    isError
+  } = useGetTasks({
+    value: valueForSearch
+  })
 
   return (
     <div className="py-10 flex flex-col p-5 pt-0 gap-7 justify-center items-center">
@@ -20,9 +23,19 @@ export default function Home() {
         <h3 className="font-extrabold text-3xl text-center text-white">
           Your Favorite List !
         </h3>
-        <SearchInput />
+        <SearchInput
+          value={valueForSearch}
+          onChange={(value) => {
+            setValueForSearch(value.target.value)
+          }}
+          onClick={() => {}}
+        />
       </div>
-      {tasksList.map((data, index) => (
+      {/* //*  Mostramos el loader en caso de que este cargando alguna request  */}
+      {(isLoading && !tasksList) ?? <Loader />}
+      {/* //*  Mostramos el error en caso de que se de */}
+      {isError && <p>Ocurrio un error</p>}
+      {tasksList?.map((data, index) => (
         <Task key={index} task={data} />
       ))}
     </div>

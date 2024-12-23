@@ -8,10 +8,12 @@ const api = axios.create({
 })
 
 export const taskServices = {
-  get: async ({ priority, id }: { priority?: Priority, id?: string | number }): Promise<AxiosResponse<{ tasks: Task[] }>> => {
+  get: async ({ priority, id, value }: { priority?: Priority, id?: string | number, value?: string }): Promise<AxiosResponse<{ tasks: Task[] }>> => {
     const queryParams = new URLSearchParams({
       ...(priority !== undefined ? { priority: priority.toString() } : undefined),
-      ...(id !== undefined ? { id: id.toString() } : undefined)
+      ...(id !== undefined ? { id: id.toString() } : undefined),
+      ...(value !== undefined ? { value: value.toString() } : undefined)
+
     })
     return await api.get(`/tasks/get?${queryParams.toString()}`)
   },

@@ -4,16 +4,16 @@ import { mapGetTasks } from './maps'
 import { queryClient } from '@/config/clients/intances'
 
 interface UseGetTasks {
-  priority?: Priority
+  value?: string
 }
 
 //! GET TASK LIST */
-export default function useGetTasks({ priority }: UseGetTasks) {
+export default function useGetTasks({ value }: UseGetTasks) {
   const res = useQuery({
-    queryKey: ['useGetTasks'],
+    queryKey: ['useGetTasks', value],
     queryFn: async () =>
       await taskServices.get({
-        priority
+        value
       })
   })
 
