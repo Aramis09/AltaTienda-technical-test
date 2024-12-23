@@ -14,7 +14,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { TaskCreateSchema } from '@/utils/formsValidators/editTask'
 import useGetTags, { useCreateTag } from '@/services/hooks/tags'
 
-export default function TaskEdit() {
+export default function TaskCreate() {
   const router = useRouter()
   //* UPDATE TASK MUTATION */
   const createTask = useCreateTask()
@@ -58,7 +58,7 @@ export default function TaskEdit() {
         alert('Ocurrio un error...')
       })
   }
-
+  //* Agrega un tag si no existe el que te gusta */
   const handlerAddTag = async () => {
     const value = prompt('Write the new tag !')
     if (!value) {
