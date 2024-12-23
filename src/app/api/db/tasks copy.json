@@ -1,0 +1,45 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Update API documentation",
+      "description": "Update the API documentation for the new version.",
+      "priority": "High",
+      "tag": "Documentation"
+    },
+    {
+      "id": 2,
+      "title": "Review landing page design",
+      "description": "Review and improve the design of the homepage.",
+      "priority": "Medium",
+      "tag": "Design"
+    },
+    {
+      "id": 3,
+      "title": "Fix backend errors",
+      "description": "Fix the errors found during integration testing.",
+      "priority": "High",
+      "tag": "Backend"
+    },
+    {
+      "id": 4,
+      "title": "Implement new search functionality",
+      "description": "Add advanced search functionality to the platform.",
+      "priority": "Medium"
+    },
+    {
+      "id": 5,
+      "title": "Optimize database performance",
+      "description": "Optimize queries and improve the database structure.",
+      "priority": "Low",
+      "tag": "Database"
+    },
+    {
+      "id": 6,
+      "title": "Strategic planning for product expansion",
+      "description": "Conduct a detailed analysis of market opportunities, including a study of competitors and customer needs. Define clear short-, medium-, and long-term objectives for product expansion. Develop specific strategies to improve the value proposition, optimize production processes, and maximize impact in new markets. Coordinate interdepartmental meetings with marketing, sales, and product development teams to align strategies and ensure effective deployment. Prepare a detailed report that includes key metrics and potential risks associated with expansion.",
+      "priority": "High",
+      "tag": "Strategy"
+    }
+  ]
+}

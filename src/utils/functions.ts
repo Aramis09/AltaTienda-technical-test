@@ -4,3 +4,7 @@ export const add3dotsFormatter = (text: string, length: number | undefined = 10)
   }
   return text
 }
+
+export const prioritiesFormatterVariant = (priority: string) => {
+  return priority.toLocaleLowerCase() as 'default' | 'danger' | 'high' | 'medium' | 'low' | null | undefined
+}

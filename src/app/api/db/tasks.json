@@ -1,0 +1,101 @@
+{
+  "tasks": [
+    {
+      "id": "3",
+      "title": "Holalaa",
+      "description": "Fix the errors found during integration testing. ",
+      "priority": "High",
+      "tag": ""
+    },
+    {
+      "id": "4",
+      "title": "Implement new search functionality",
+      "description": "Add advanced search functionality to the platform.",
+      "priority": "Medium",
+      "tag": "Strategy"
+    },
+    {
+      "id": "5",
+      "title": "Optimize database performance ed",
+      "description": "Holaa",
+      "priority": "Low",
+      "tag": "Database"
+    },
+    {
+      "id": "6",
+      "title": "Strategic planning for product expansion",
+      "description": "Conduct a detailed analysis of market opportunities, including a study of competitors and customer needs. Define clear short-, medium-, and long-term objectives for product expansion. Develop specific strategies to improve the value proposition, optimize production processes, and maximize impact in new markets. Coordinate interdepartmental meetings with marketing, sales, and product development teams to align strategies and ensure effective deployment. Prepare a detailed report that includes key metrics and potential risks associated with expansion.",
+      "priority": "High",
+      "tag": "Strategy"
+    },
+    {
+      "id": "b2b6",
+      "title": "SOU NUEVO",
+      "description": "Holaa",
+      "priority": "Low",
+      "tag": "Database"
+    },
+    {
+      "id": "b71a",
+      "title": "SOU NUEVO",
+      "description": "Holaa",
+      "priority": "Low",
+      "tag": "Database"
+    },
+    {
+      "id": "9721",
+      "title": "Holaa",
+      "priority": "Medium",
+      "description": "TAMOS TODOS"
+    },
+    {
+      "id": "a864",
+      "title": "asdasd",
+      "priority": "High",
+      "tag": "Design",
+      "description": "asdasd"
+    }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "title": "Documentation",
+      "value": "Documentation"
+    },
+    {
+      "id": 2,
+      "title": "Design",
+      "value": "Design"
+    },
+    {
+      "id": 3,
+      "title": "Backend",
+      "value": "Backend"
+    },
+    {
+      "id": 4,
+      "title": "Database",
+      "value": "Database"
+    },
+    {
+      "id": 5,
+      "title": "Strategy",
+      "value": "Strategy"
+    },
+    {
+      "id": "bda8",
+      "title": "NUEVO",
+      "value": "NUEVO"
+    },
+    {
+      "id": "2b55",
+      "title": "NUEVO 2",
+      "value": "NUEVO 2"
+    },
+    {
+      "id": "a9cc",
+      "title": "NUEVO 3",
+      "value": "NUEVO 3"
+    }
+  ]
+}
