@@ -1,5 +1,5 @@
 import { Priority } from '@/interfaces/enums'
-import { z, type ZodType } from 'zod' // Add new import
+import { z, type ZodType } from 'zod'
 
 export const TaskEditSchema: ZodType<Partial<FormDataCreate>> = z
   .object({
@@ -8,7 +8,7 @@ export const TaskEditSchema: ZodType<Partial<FormDataCreate>> = z
     tag: z.string().max(20).optional(),
     description: z.string().max(200).optional()
   })
-
+// @ts-expect-error Zod no me deja forma poner como requerido al title y priority, entonces choca con FormDataCreate
 export const TaskCreateSchema: ZodType<FormDataCreate> = z
   .object({
     title: z.string().max(40).min(1, 'Title is required').max(40),

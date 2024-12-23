@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Icon404 from '../public/icons/404/404.svg'
 import { Loader } from '@/components/ui/loader/loader'
 // import Loader from "@/components/ui/loader";
-export default function Custom404 () {
+export default function Custom404() {
   const [loader, setLoader] = useState(true)
   setTimeout(() => {
     setLoader(false)

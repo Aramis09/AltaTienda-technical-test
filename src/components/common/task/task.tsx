@@ -21,17 +21,18 @@ export default function Task({ task }: Props) {
     const res = confirm('Quiere borrar esto ?')
 
     if (res) {
-      await deleteTask.mutateAsync({
-        id: task.id
-      })
-        .catch(() => { alert('There was a problem...!') })
+      await deleteTask
+        .mutateAsync({
+          id: task.id
+        })
+        .catch(() => {
+          alert('There was a problem...!')
+        })
     }
   }
 
   return (
-    <div
-      className="bg-gradient-to-r from-[#151b58]  to-[#03093a] w-full p-5 rounded-md text-white cursor-pointer "
-    >
+    <div className="bg-gradient-to-r from-[#151b58] overflow-hidden  to-[#03093a] w-full p-5 rounded-md text-white cursor-pointer ">
       <div className="flex flex-row justify-between items-start">
         <h5 className="font-semibold text-xl">{task.title}</h5>
         <Label variant={prioritiesFormatterVariant(task.priority)}>
@@ -41,13 +42,22 @@ export default function Task({ task }: Props) {
       <p className="text-link">{task.tag}</p>
       {task.description
         ? (
-        <div className='flex-col justify-center items-center ' onClick={() => {
-          setOpen(!open)
-        }}>
+        <div
+          className="flex-col justify-center items-center "
+          onClick={() => {
+            setOpen(!open)
+          }}
+        >
           <p className="text-gray-300">
-          {!open ? add3dotsFormatter(task.description, 50) : task.description}
-        </p>
-        {!open ? <ChevronDown width={'100%'} className='animate-bounce'/> : <></>}
+            {!open ? add3dotsFormatter(task.description, 50) : task.description}
+          </p>
+          {!open
+            ? (
+            <ChevronDown width={'100%'} className="animate-bounce" />
+              )
+            : (
+            <></>
+              )}
         </div>
           )
         : (
@@ -56,7 +66,7 @@ export default function Task({ task }: Props) {
       {open
         ? (
         <div className="flex mt-8 flex-row justify-center items-center gap-5">
-          <Link href={`/task-edit?id=${task.id}`} className='w-full p-0 m-0'>
+          <Link href={`/task-edit?id=${task.id}`} className="w-full p-0 m-0">
             <Button size={'sm'} className="text-base font-medium">
               Edit
             </Button>
@@ -74,7 +84,6 @@ export default function Task({ task }: Props) {
         : (
         <></>
           )}
-
     </div>
   )
 }

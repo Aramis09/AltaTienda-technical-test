@@ -21,7 +21,9 @@ const config: Config = {
         priorityMedium: '#EB5B00',
         priorityLow: '#FFB200',
         inputBackground: '#1f093d',
-        inputBorder: '#2b124d'
+        inputBorder: '#2b124d',
+        gradiantStart: '#3b3fe6',
+        gradiantEnd: '#dc1bd7'
       },
       animation: {
         shake: 'shake 0.5s ease-in-out infinite'

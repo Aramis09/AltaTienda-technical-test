@@ -32,10 +32,16 @@ export default function TaskEdit() {
   })
 
   //* Traemos la informacion de los tags */
-  const { data: tags, isLoading: isLoadingTags, isError: isErrorTags } = useGetTags()
+  const {
+    data: tags,
+    isLoading: isLoadingTags,
+    isError: isErrorTags
+  } = useGetTags()
 
   //* Mostramos el loader si esta cargando alguna de las request */
-  if (isLoadingTags || !tags || createTag.isPending || createTask.isPending) return <Loader />
+  if (isLoadingTags || !tags || createTag.isPending || createTask.isPending) {
+    return <Loader />
+  }
 
   //* Mostramos el error en caso de que se de */
   if (isErrorTags) return <>Ocurrio un error</>
@@ -70,7 +76,7 @@ export default function TaskEdit() {
   return (
     <div className="py-10 flex flex-col p-5 pt-20 gap-2 justify-center items-center">
       <h3 className="font-extrabold text-3xl text-center text-white ">
-        Edit your task
+        Create your task
       </h3>
 
       <Link href={'/'}>
@@ -112,7 +118,7 @@ export default function TaskEdit() {
             variant={'default'}
             size={'icon'}
             className=" right-0 top-6 absolute"
-            type='button'
+            type="button"
           >
             <CirclePlus
               color="white"
@@ -126,6 +132,7 @@ export default function TaskEdit() {
         <TextArea
           title="Description"
           {...register('description')}
+          error={errors.description?.message}
         />
         <Button type="submit">Create</Button>
       </form>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { type SelectProps } from './settings/cva'
+import { selectVariants, type SelectProps } from './settings/cva'
 import { cn } from '@/utils/tailwind'
 
 export function Select<T>({
@@ -9,6 +9,7 @@ export function Select<T>({
   classNameTitle,
   error,
   className,
+  rounded,
   ...props
 }: SelectProps<T>) {
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -28,7 +29,7 @@ export function Select<T>({
       <select
         {...props}
         onChange={handleChange}
-        className="w-full rounded-md p-2 bg-inputBackground text-white border-2 border-inputBorder"
+        className={cn(selectVariants({ rounded }))} //* Aqui deberiamos de agregar las variantes del select */
       >
         {items.map((item, index) => (
           <option key={index} value={String(item.value)}>
@@ -36,7 +37,9 @@ export function Select<T>({
           </option>
         ))}
       </select>
-      {error && <span className='text-sm text-red-600 text-left ml-2'>{error}</span>}
+      {error && (
+        <span className="text-sm text-red-600 text-left ml-2">{error}</span>
+      )}
     </div>
   )
 }

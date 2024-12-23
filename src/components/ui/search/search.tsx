@@ -1,14 +1,14 @@
 import { Search } from 'lucide-react'
 import { Button } from '../button/button'
 import { Input } from '../input/input'
+import { type SearchInputProps } from './settings/cva'
 
-interface SearchInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  placeholder?: string
-  type?: string
-  onClick?: () => void
-}
-
-export function SearchInput({ placeholder, type, onClick, ...props }: SearchInputProps) {
+export function SearchInput({
+  placeholder,
+  type,
+  onClick,
+  ...props
+}: SearchInputProps) {
   return (
     <div className="flex w-full max-w-sm items-center space-x-2">
       <Input
@@ -17,7 +17,13 @@ export function SearchInput({ placeholder, type, onClick, ...props }: SearchInpu
         placeholder={placeholder ?? 'search titles...'}
         {...props}
       />
-      <Button type="submit" variant={'icon'} size={'icon'} rounded={'full'} onClick={onClick}>
+      <Button
+        type="submit"
+        variant={'icon'}
+        size={'icon'}
+        rounded={'full'}
+        onClick={onClick}
+      >
         <Search
           style={{
             width: 40,

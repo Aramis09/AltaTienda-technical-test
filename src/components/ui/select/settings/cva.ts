@@ -12,16 +12,17 @@ export interface SelectProps<T = string>
   title?: string
   error?: string
 }
-
+//* Aqui podria agregar variantes pero no tuve tiempo, igual es expandible */
 export const selectVariants = cva(
-  '',
+  'w-full rounded-md p-2 bg-inputBackground text-white border-2 border-inputBorder',
   {
     variants: {
       variant: {
 
       },
       rounded: {
-
+        sm: 'rounded-sm',
+        md: 'rounded-md'
       }
     },
     defaultVariants: {

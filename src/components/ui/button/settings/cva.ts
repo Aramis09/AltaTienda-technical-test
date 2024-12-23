@@ -10,7 +10,7 @@ export const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: 'bg-gradient-to-r from-[#3b3fe6] to-[#dc1bd7] text-white  flex justify-center items-center font-semibold',
+        default: 'bg-gradient-to-r from-gradiantStart to-gradiantEnd text-white  flex justify-center items-center font-semibold',
         destructive:
           'bg-red-500 text-neutral-50 shadow-sm hover:bg-red-500/90 dark:bg-red-900 dark:text-neutral-50 dark:hover:bg-red-900/90',
         outline:
@@ -40,6 +40,3 @@ export const buttonVariants = cva(
     }
   }
 )
-
-// default:
-// 'bg-neutral-900 text-neutral-50 shadow hover:bg-neutral-900/90 dark:bg-neutral-50 dark:text-neutral-900 dark:hover:bg-neutral-50/90',

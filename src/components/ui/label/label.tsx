@@ -6,14 +6,17 @@ const Label = React.forwardRef<HTMLParagraphElement, LabelProps>(
   ({ className, children, rounded, variant, ...props }, ref) => {
     return (
       <p
-        className={cn(labelVariants({
-          rounded,
-          variant
-        })
+        className={cn(
+          labelVariants({
+            rounded,
+            variant
+          })
         )}
         ref={ref}
         {...props}
-      >{children}</p>
+      >
+        {children}
+      </p>
     )
   }
 )

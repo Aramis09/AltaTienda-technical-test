@@ -43,10 +43,23 @@ export default function TaskEdit() {
     id
   })
   //* Traemos la informacion de los tags */
-  const { data: tags, isLoading: isLoadingTags, isError: isErrorTags } = useGetTags()
+  const {
+    data: tags,
+    isLoading: isLoadingTags,
+    isError: isErrorTags
+  } = useGetTags()
 
   //* Mostramos el loader si esta cargando alguna de las request */
-  if (isLoading || !task || isLoadingTags || !tags || createTag.isPending || updateTask.isPending) return <Loader />
+  if (
+    isLoading ||
+    !task ||
+    isLoadingTags ||
+    !tags ||
+    createTag.isPending ||
+    updateTask.isPending
+  ) {
+    return <Loader />
+  }
 
   //* Mostramos el error en caso de que se de */
   if (isError || isErrorTags) return <>Ocurrio un error</>
@@ -128,7 +141,7 @@ export default function TaskEdit() {
             variant={'default'}
             size={'icon'}
             className=" right-0 top-6 absolute"
-            type='button'
+            type="button"
           >
             <CirclePlus
               color="white"
@@ -143,6 +156,7 @@ export default function TaskEdit() {
           title="Description"
           defaultValue={task.description}
           {...register('description')}
+          error={errors.description?.message}
         />
         <Button type="submit">Edit</Button>
       </form>

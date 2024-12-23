@@ -3,6 +3,7 @@ export interface TextareaProps
   extends React.TextareaHTMLAttributes<HTMLTextAreaElement>,
   VariantProps<typeof textVariants> {
   classNameTitle?: string
+  error: string
 }
 
 export const textVariants = cva(

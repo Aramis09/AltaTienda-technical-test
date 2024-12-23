@@ -8,7 +8,7 @@ interface Task {
   tag?: string
 }
 
-//! Interfaces to create or edit a task
+//! Interfaces to create a task
 interface FormDataCreate extends Omit<Task, 'id'> { }
 
 interface Tag {
