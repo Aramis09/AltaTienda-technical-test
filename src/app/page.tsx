@@ -34,7 +34,7 @@ export default function Home() {
         />
       </div>
       {/* //*  Mostramos el loader en caso de que este cargando alguna request  */}
-      {(isLoading && !tasksList) ?? <Loader />}
+      {(isLoading && !tasksList) ? <Loader className=' w-full' classNameLoader='top-[50%]'/> : <></>}
       {/* //*  Mostramos el error en caso de que se de */}
       {isError && <p>Ocurrio un error</p>}
       {tasksList?.map((data, index) => (

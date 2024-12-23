@@ -23,6 +23,7 @@ export function SearchInput({
         size={'icon'}
         rounded={'full'}
         onClick={onClick}
+        name='search'
       >
         <Search
           style={{

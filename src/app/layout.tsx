@@ -9,6 +9,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <title>Alta Tienda Test</title>
+        <meta name="description" content="Esto es una prueba tecnica."/>
+
+      </head>
       <body className={'antialiased bg-background'}>
         <Providers>{children}</Providers>
       </body>
