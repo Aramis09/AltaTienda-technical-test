@@ -10,5 +10,7 @@
 body {
   font-family:Roboto, Arial, Helvetica, sans-serif;
   --secondary-color: #2ecc71;
+  max-width: 1068px;
+  margin: 0 auto;
 }
 

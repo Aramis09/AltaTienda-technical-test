@@ -40,7 +40,7 @@ export default function Home() {
       {tasksList?.map((data, index) => (
         <Task key={index} task={data} />
       ))}
-      <Link href="/task-create" className="w-full p-0 m-0 fixed bottom-0 ">
+      <Link href="/task-create" className="w-full p-0 m-0 fixed bottom-0 max-w-[1068px]">
         <Button className="w-full" rounded="none">
           Create Task
         </Button>
