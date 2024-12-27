@@ -6,5 +6,8 @@ export const add3dotsFormatter = (text: string, length: number | undefined = 10)
 }
 
 export const prioritiesFormatterVariant = (priority: string) => {
-  return priority.toLocaleLowerCase() as 'default' | 'danger' | 'high' | 'medium' | 'low' | null | undefined
+  if (!priority) return 'default'
+  const valueLowerCase = priority.toLocaleLowerCase()
+  if (valueLowerCase !== 'low' && valueLowerCase !== 'high' && valueLowerCase !== 'medium' && valueLowerCase !== 'danger') { return 'default' }
+  return valueLowerCase
 }
