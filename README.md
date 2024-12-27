@@ -10,5 +10,7 @@
    
    - `npm run dev`
      - *This run next js*
+   - `npm test`
+     - *This run tests*
 
 
