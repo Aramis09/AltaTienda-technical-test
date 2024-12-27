@@ -108,6 +108,7 @@ export default function TaskEdit() {
       >
         <Input
           title="Title"
+          placeholder='Title'
           defaultValue={task.title}
           {...register('title', { required: true })}
           error={errors.title?.message}
@@ -154,6 +155,7 @@ export default function TaskEdit() {
         </div>
         <TextArea
           title="Description"
+          placeholder='Description'
           defaultValue={task.description}
           {...register('description')}
           error={errors.description?.message}
